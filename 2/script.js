@@ -7,6 +7,8 @@ async function buscarPokemon() {
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${input}`);
     const data = await response.json();
     console.log(data.name);
+    console.log(data);
+    
     img.src = data.sprites.front_default;
   } catch (error) {
     console.error(error);
